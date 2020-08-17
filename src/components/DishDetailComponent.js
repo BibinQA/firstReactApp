@@ -36,7 +36,7 @@ class DishDetail extends Component {
             return (
                 <div className='col-12 col-md-5 m-1'>
                     <Card>
-                        <CardImg width="100%" src={dish.image} alt={dish.name} />
+                        <CardImg src={dish.image} alt={dish.name} />
                         <CardBody>
                             <CardTitle>{dish.name}</CardTitle>
                             <CardText>{dish.description}</CardText>
@@ -58,9 +58,11 @@ class DishDetail extends Component {
         const dishId = this.renderDish(dish)
         const commentDish = this.renderComments(dish.comments)
         return (
-            <div className='row'>
-                {dishId}
-                {commentDish}
+            <div className="container">
+                <div className='row'>
+                    {dishId}
+                    {commentDish}
+                </div>
             </div>
         )
     }
